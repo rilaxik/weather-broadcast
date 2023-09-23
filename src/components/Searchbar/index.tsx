@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import s from './style.module.scss';
-import searchIcon from '../../assets/icon-search.svg';
+import { iconSearch } from '../../assets';
 
 const Searchbar = ({ callback }: Props) => {
   const [searchBarValue, setSearchBarValue] = useState('');
@@ -14,15 +14,15 @@ const Searchbar = ({ callback }: Props) => {
         defaultValue={searchBarValue}
         onChange={(e) => searchbarChange(e)}
       />
-      <div className={s.searchbarIcon}>
-        <img src={searchIcon} alt="" />
+      <div className={s.searchbarIcon} onClick={() => callback(searchBarValue)}>
+        <img src={iconSearch} alt="" />
       </div>
     </div>
   );
 
   function searchbarChange(e: any) {
     setSearchBarValue(e.target.value);
-    console.log(e.target.value);
+    // console.log(e.target.value);
   }
 };
 

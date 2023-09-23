@@ -1,0 +1,44 @@
+@import '../../consts/fonts.module';
+
+.generalWrapper {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 32px;
+  background-color: #444;
+  gap: 24px;
+
+  .gCity {
+    font-size: $fs-city;
+    color: $text-color;
+    font-weight: 700;
+  }
+
+  .gDateTime {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    .gDate {
+      display: flex;
+
+      font-size: $fs-date;
+      font-weight: 400;
+      color: $text-color;
+    }
+
+    .gTime {
+      display: flex;
+
+      font-size: $fs-time;
+      font-weight: 800;
+      color: $text-color;
+    }
+  }
+}

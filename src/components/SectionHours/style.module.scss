@@ -1,0 +1,31 @@
+@import '../../consts/fonts.module';
+
+.hWrapper {
+  display: flex;
+  flex: 3;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 32px;
+  background-color: #444;
+  gap: 8px;
+  padding: 8px 16px;
+
+  .hTitle {
+    display: flex;
+    font-size: $fs-title;
+    color: $text-color;
+    font-weight: 700;
+  }
+
+  .hSWrapper {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 16px;
+  }
+}

@@ -1,0 +1,42 @@
+@import '../../consts/fonts.module';
+
+.hWrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 16px;
+  padding: 16px;
+
+  background-color: #333;
+  border-radius: 16px;
+
+  .hTime {
+    display: flex;
+    font-size: $fs-hourtime;
+    color: $text-color;
+    font-weight: 700;
+  }
+
+  .hIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 64px;
+    max-height: 64px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .hValues {
+    display: flex;
+
+    font-size: $fs-hourtemp;
+    color: $text-color;
+    font-weight: 700;
+  }
+}

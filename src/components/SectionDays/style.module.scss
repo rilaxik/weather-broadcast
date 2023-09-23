@@ -1,0 +1,21 @@
+@import '../../consts/fonts.module';
+
+.dsWrapper {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  border-radius: 32px;
+  background-color: #444;
+  gap: 16px;
+  padding: 16px;
+
+  .dsTitle {
+    display: flex;
+    font-size: $fs-title;
+    color: $text-color;
+    font-weight: 700;
+  }
+}
