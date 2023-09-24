@@ -18,6 +18,7 @@ export type CityData = {
   latitude: number;
   longitude: number;
   name: string;
+  timezone: string;
 };
 
 export type WeatherData = {

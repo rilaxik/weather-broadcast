@@ -16,7 +16,7 @@ const PageWrapper = () => {
       {weatherData !== null ? (
         <>
           <section className={s.section}>
-            <SectionGeneral />
+            <SectionGeneral city={cityData.name} timezone={cityData.timezone} />
             <SectionDetailed />
           </section>
           <section className={s.section}>
