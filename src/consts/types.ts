@@ -4,10 +4,10 @@ enum SUN {
 }
 
 enum INFO {
-  HUMIDITY = 'humidity',
-  WIND = 'wind',
-  PRESSURE = 'pressure',
-  UV = 'uv'
+  HUMIDITY = 'Humidity',
+  WIND = 'Wind',
+  PRESSURE = 'Pressure',
+  UV = 'UV'
 }
 
 export { SUN, INFO };
@@ -23,7 +23,9 @@ export type CityData = {
 
 export type WeatherData = {
   generationtime_ms: number;
+  timezone: string;
   current_weather: {
+    is_day: number;
     temperature: number;
     time: number;
     weathercode: number;
@@ -46,5 +48,26 @@ export type WeatherData = {
     apparent_temperature_min: string;
     precipitation_probability_max: string;
     windspeed_10m_max: string;
+    uv_index_max: string;
+  };
+  hourly: {
+    apparent_temperature: number[];
+    relativehumidity_2m: number[];
+    surface_pressure: number[];
+    temperature_2m: number[];
+    time: number[];
+    weathercode: number[];
+    winddirection_180m: number[];
+    windspeed_10m: number[];
+  };
+  hourly_units: {
+    apparent_temperature: string;
+    relativehumidity_2m: string;
+    surface_pressure: string;
+    temperature_2m: string;
+    time: string;
+    weathercode: string;
+    winddirection_180m: string;
+    windspeed_10m: string;
   };
 };

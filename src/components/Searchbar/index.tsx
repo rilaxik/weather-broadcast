@@ -3,7 +3,7 @@ import s from './style.module.scss';
 import { iconSearch } from '../../assets';
 
 const Searchbar = ({ callback }: Props) => {
-  const [searchBarValue, setSearchBarValue] = useState('');
+  const [searchBarValue, setSearchBarValue] = useState(' ');
 
   return (
     <div className={s.searchbarWrapper}>

@@ -9,8 +9,8 @@ const SectionGeneral = ({ city, timezone }: Props) => {
     <div className={s.generalWrapper}>
       <span className={s.gCity}>{city}</span>
       <div className={s.gDateTime}>
-        <div className={s.gTime}>{date.hour + ':' + date.minute}</div>
-        <div className={s.gDate}>{date.toFormat('MMMM dd, yyyy')}</div>
+        <div className={s.gTime}>{date.toLocaleString(DateTime.TIME_24_SIMPLE)}</div>
+        <div className={s.gDate}>{date.toLocaleString(DateTime.DATE_MED)}</div>
       </div>
     </div>
   );

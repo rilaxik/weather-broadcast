@@ -11,7 +11,7 @@ const DetailedSun = ({ v, time }: Props) => {
       </div>
       <div className={s.data}>
         <div className={s.title}>{v === SUN.SET ? 'Sunset' : 'Sunrise'}</div>
-        <div className={s.time}>06:37</div>
+        <div className={s.time}>{time}</div>
       </div>
     </div>
   );
@@ -21,5 +21,5 @@ export default DetailedSun;
 
 type Props = {
   v: SUN;
-  time: number;
+  time: string;
 };

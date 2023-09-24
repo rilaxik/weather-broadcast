@@ -4,6 +4,7 @@ import s from './style.module.scss';
 import { Searchbar, SectionGeneral, SectionDetailed, SectionDays, SectionHours } from '../';
 import { getWeather } from '../../api/weather.ts';
 import { getLocation } from '../../api/location.ts';
+import { getIcon } from '../../api/icons.ts';
 import { CityData, WeatherData } from '../../consts/types.ts';
 
 const PageWrapper = () => {
@@ -17,7 +18,7 @@ const PageWrapper = () => {
         <>
           <section className={s.section}>
             <SectionGeneral city={cityData.name} timezone={cityData.timezone} />
-            <SectionDetailed />
+            <SectionDetailed weather={weatherData} />
           </section>
           <section className={s.section}>
             <SectionDays />
@@ -32,7 +33,7 @@ const PageWrapper = () => {
     await getLocation()
       .then(async (city: { results: CityData[] }) => {
         setCityData(city.results[0]);
-        console.log(city);
+        // console.log(city.results[0]);
 
         return city.results[0];
       })

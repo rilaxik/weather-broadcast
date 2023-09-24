@@ -1,34 +1,77 @@
 import React from 'react';
+import { DateTime } from 'luxon';
 import s from './style.module.scss';
 
 import { DetailedSun, DetailedInfo } from '../';
-import { INFO, SUN } from '../../consts/types.ts';
+import { INFO, SUN, WeatherData } from '../../consts/types.ts';
+import { getDescription, getIcon } from '../../api/icons.ts';
+import { average } from '../../consts/functions.ts';
 
-const SectionDetailed = () => {
+const SectionDetailed = ({ weather }: Props) => {
   return (
     <div className={s.detailedWrapper}>
       <div className={`${s.dBlock} ${s.dTemperature}`}>
-        <div className={s.dReal}>24 C</div>
-        <div className={s.dFeels}>
-          <span>Feels like</span> <span className={s.dTemp}>22 C</span>
+        <div className={s.dReal}>
+          {Math.round(weather.current_weather.temperature) +
+            weather.daily_units.apparent_temperature_min}
         </div>
-        <DetailedSun v={SUN.RISE} time={2} />
-        <DetailedSun v={SUN.SET} time={2} />
+        <div className={s.dFeels}>
+          <span>Feels like </span>
+          <span className={s.dTemp}>
+            {average(
+              ...weather.daily.apparent_temperature_min,
+              ...weather.daily.apparent_temperature_max
+            ) + weather.daily_units.apparent_temperature_min}
+          </span>
+        </div>
+        <DetailedSun
+          v={SUN.RISE}
+          time={DateTime.fromSeconds(weather.daily.sunrise[0])
+            .setZone(weather.timezone)
+            .toLocaleString(DateTime.TIME_24_SIMPLE)}
+        />
+        <DetailedSun
+          v={SUN.SET}
+          time={DateTime.fromSeconds(weather.daily.sunset[0])
+            .setZone(weather.timezone)
+            .toLocaleString(DateTime.TIME_24_SIMPLE)}
+        />
       </div>
       <div className={`${s.dBlock} ${s.dSky}`}>
         <div className={s.dIcon}>
-          <img src="https://placehold.co/300" alt="" />
+          <img
+            src={getIcon(weather.current_weather.weathercode, weather.current_weather.is_day)}
+            alt=""
+          />
         </div>
-        <div className={s.dDesc}>Sunny</div>
+        <div className={s.dDesc}>
+          {getDescription(weather.current_weather.weathercode, weather.current_weather.is_day)}
+        </div>
       </div>
       <div className={`${s.dBlock} ${s.dInfo}`}>
-        <DetailedInfo v={INFO.HUMIDITY} value={41} unit={'%'} label={'Humidity'} />
-        <DetailedInfo v={INFO.WIND} value={2} unit={'m/s'} label={'Wind'} />
-        <DetailedInfo v={INFO.PRESSURE} value={997} unit={'hPa'} label={'Pressure'} />
-        <DetailedInfo v={INFO.UV} value={8} unit={''} label={'UV'} />
+        <DetailedInfo
+          v={INFO.HUMIDITY}
+          value={weather.hourly.relativehumidity_2m}
+          unit={weather.hourly_units.relativehumidity_2m}
+        />
+        <DetailedInfo
+          v={INFO.WIND}
+          value={weather.daily.windspeed_10m_max[0]}
+          unit={weather.daily_units.windspeed_10m_max}
+        />
+        <DetailedInfo v={INFO.PRESSURE} value={weather.hourly.surface_pressure} unit={'hPa'} />
+        <DetailedInfo
+          v={INFO.UV}
+          value={weather.daily.uv_index_max[0]}
+          unit={weather.daily_units.uv_index_max[0]}
+        />
       </div>
     </div>
   );
 };
 
 export default SectionDetailed;
+
+type Props = {
+  weather: WeatherData;
+};
