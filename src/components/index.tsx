@@ -8,6 +8,8 @@ import SectionDays from './SectionDays';
 import DaysForecast from './DaysForecast';
 import SectionHours from './SectionHours';
 import HoursForecast from './HoursForecast';
+import ChangeLocation from './ChangeLocation';
+import CityInfo from './CityInfo';
 
 export {
   PageWrapper,
@@ -19,5 +21,7 @@ export {
   SectionDays,
   DaysForecast,
   SectionHours,
-  HoursForecast
+  HoursForecast,
+  ChangeLocation,
+  CityInfo
 };

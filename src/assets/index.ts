@@ -6,6 +6,7 @@ import iconUV from './icon-info-uv.svg';
 import iconWind from './icon-info-wind.svg';
 import iconSearch from './icon-search.svg';
 import iconWindDir from './icon-winddir.svg';
+import iconPopulation from './icon-population.svg';
 
 export {
   iconHumidity,
@@ -15,5 +16,6 @@ export {
   iconUV,
   iconWind,
   iconSearch,
-  iconWindDir
+  iconWindDir,
+  iconPopulation
 };

@@ -14,11 +14,10 @@ const HoursForecast = ({
   temp_unit,
   wind_speed,
   wind_speed_unit,
-  wind_direction,
-  key
+  wind_direction
 }: Props) => {
   return (
-    <div className={`${s.hWrapper} hours-forecast-${key}`}>
+    <div className={s.hWrapper}>
       <div className={s.hTime}>
         {DateTime.fromSeconds(timestamp).setZone(timezone).toLocaleString(DateTime.TIME_24_SIMPLE)}
       </div>
@@ -56,5 +55,4 @@ type Props = {
   wind_speed: number;
   wind_speed_unit: string;
   wind_direction: number;
-  key: number;
 };

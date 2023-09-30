@@ -3,18 +3,18 @@ import s from './style.module.scss';
 import { iconSearch } from '../../assets';
 
 const Searchbar = ({ callback }: Props) => {
-  const [searchBarValue, setSearchBarValue] = useState(' ');
+  const [searchBarValue, setSearchBarValue] = useState('');
 
   return (
     <div className={s.searchbarWrapper}>
       <input
         className={s.searchbar}
-        placeholder={'Your location'}
+        placeholder={'Desired location'}
         value={searchBarValue}
-        defaultValue={searchBarValue}
         onChange={(e) => searchbarChange(e)}
+        onKeyDown={(e) => (e.key === 'Enter' ? invokeSearch(searchBarValue) : null)}
       />
-      <div className={s.searchbarIcon} onClick={() => callback(searchBarValue)}>
+      <div className={s.searchbarIcon} onClick={() => invokeSearch(searchBarValue)}>
         <img src={iconSearch} alt="" />
       </div>
     </div>
@@ -22,7 +22,10 @@ const Searchbar = ({ callback }: Props) => {
 
   function searchbarChange(e: any) {
     setSearchBarValue(e.target.value);
-    // console.log(e.target.value);
+  }
+
+  function invokeSearch(value: string) {
+    callback(value);
   }
 };
 

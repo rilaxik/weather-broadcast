@@ -9,11 +9,10 @@ const DaysForecast = ({
   temp_max,
   temp_unit,
   timestamp,
-  timezone,
-  key
+  timezone
 }: Props) => {
   return (
-    <div className={`${s.daysWrapper} days-forecast-${key}`}>
+    <div className={s.daysWrapper}>
       <div className={s.daysIcon}>
         <img src={getIcon(weathercode, 1)} alt="" />
       </div>
@@ -38,5 +37,4 @@ type Props = {
   temp_unit: string;
   timestamp: number;
   timezone: string;
-  key: number;
 };
