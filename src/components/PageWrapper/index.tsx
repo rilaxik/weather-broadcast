@@ -4,7 +4,6 @@ import s from './style.module.scss';
 import { Searchbar, SectionGeneral, SectionDetailed, SectionDays, SectionHours } from '../';
 import { getWeather } from '../../api/weather.ts';
 import { getLocation } from '../../api/location.ts';
-import { getIcon } from '../../api/icons.ts';
 import { CityData, WeatherData } from '../../consts/types.ts';
 
 const PageWrapper = () => {
@@ -21,8 +20,8 @@ const PageWrapper = () => {
             <SectionDetailed weather={weatherData} />
           </section>
           <section className={s.section}>
-            <SectionDays />
-            <SectionHours />
+            <SectionDays weather={weatherData} />
+            <SectionHours weather={weatherData} />
           </section>
         </>
       ) : null}

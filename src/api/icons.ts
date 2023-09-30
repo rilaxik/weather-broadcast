@@ -1,10 +1,10 @@
 function getIcon(code: number, isDay: number) {
-  switch (isDay) {
-    case 0:
-      return icons[code].night.image;
-    default:
-      return icons[code].day.image;
-  }
+  // switch (isDay) {
+  //   case 0:
+  //     return icons[code].night.image;
+  //   default:
+  return icons[code].day.image;
+  // }
 }
 
 function getDescription(code: number, isDay: number) {
