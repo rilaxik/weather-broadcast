@@ -1,10 +1,11 @@
 import React from 'react';
-import s from './style.module.scss';
 
 import { DateTime } from 'luxon';
-import { getIcon } from '../../api/icons.ts';
+import { getIcon } from '../../api';
 import { average } from '../../consts/functions.ts';
+
 import { iconWindDir } from '../../assets';
+import s from './style.module.scss';
 
 const HoursForecast = ({
   timestamp,

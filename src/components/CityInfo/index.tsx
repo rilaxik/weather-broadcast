@@ -1,7 +1,7 @@
 import React from 'react';
+import { getFlag } from '../../api';
 
 import { iconPopulation } from '../../assets';
-import { getFlag } from '../../api/flags.ts';
 import s from './style.module.scss';
 
 const CityInfo = ({

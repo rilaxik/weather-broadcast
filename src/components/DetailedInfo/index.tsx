@@ -1,8 +1,9 @@
 import React from 'react';
-import s from './style.module.scss';
 import { INFO } from '../../consts/types.ts';
 import { average } from '../../consts/functions.ts';
+
 import { iconHumidity, iconPressure, iconUV, iconWind } from '../../assets';
+import s from './style.module.scss';
 
 const DetailedInfo = ({ v, value, unit }: Props) => {
   return (

@@ -1,7 +1,8 @@
 import React from 'react';
-import s from './style.module.scss';
-import { HoursForecast } from '../';
 import { WeatherData } from '../../consts/types.ts';
+
+import { HoursForecast } from '../';
+import s from './style.module.scss';
 
 const SectionHours = ({ weather }: Props) => {
   return (

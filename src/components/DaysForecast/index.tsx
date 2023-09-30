@@ -1,7 +1,8 @@
 import React from 'react';
-import s from './style.module.scss';
 import { DateTime } from 'luxon';
-import { getIcon } from '../../api/icons.ts';
+import { getIcon } from '../../api';
+
+import s from './style.module.scss';
 
 const DaysForecast = ({
   weathercode,

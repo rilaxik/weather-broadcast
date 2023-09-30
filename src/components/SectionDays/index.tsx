@@ -1,8 +1,8 @@
 import React from 'react';
-import s from './style.module.scss';
+import { WeatherData } from '../../consts/types.ts';
 
 import { DaysForecast } from '../';
-import { WeatherData } from '../../consts/types.ts';
+import s from './style.module.scss';
 
 const SectionDays = ({ weather }: Props) => {
   return (

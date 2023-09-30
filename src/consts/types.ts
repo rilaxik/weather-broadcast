@@ -1,16 +1,14 @@
-enum SUN {
+export enum SUN {
   RISE = 'rise',
   SET = 'set'
 }
 
-enum INFO {
+export enum INFO {
   HUMIDITY = 'Humidity',
   WIND = 'Wind',
   PRESSURE = 'Pressure',
   UV = 'UV'
 }
-
-export { SUN, INFO };
 
 export type CityData = {
   country: string;

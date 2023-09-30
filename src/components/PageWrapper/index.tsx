@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { getLocation, getWeather } from '../../api';
+import { CityData, WeatherData } from '../../consts/types.ts';
 
 import s from './style.module.scss';
 import {
@@ -10,9 +12,6 @@ import {
   SectionHours,
   CityInfo
 } from '../';
-import { getWeather } from '../../api/weather.ts';
-import { getLocation } from '../../api/location.ts';
-import { CityData, WeatherData } from '../../consts/types.ts';
 
 const PageWrapper = () => {
   const [weatherData, setWeatherData] = useState<WeatherData>(null);

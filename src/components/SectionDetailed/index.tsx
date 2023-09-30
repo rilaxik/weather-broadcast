@@ -1,11 +1,11 @@
 import React from 'react';
 import { DateTime } from 'luxon';
-import s from './style.module.scss';
+import { INFO, SUN, WeatherData } from '../../consts/types.ts';
+import { getDescription, getIcon } from '../../api';
+import { average } from '../../consts/functions.ts';
 
 import { DetailedSun, DetailedInfo } from '../';
-import { INFO, SUN, WeatherData } from '../../consts/types.ts';
-import { getDescription, getIcon } from '../../api/icons.ts';
-import { average } from '../../consts/functions.ts';
+import s from './style.module.scss';
 
 const SectionDetailed = ({ weather }: Props) => {
   return (

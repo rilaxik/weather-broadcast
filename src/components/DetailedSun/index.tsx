@@ -1,7 +1,8 @@
 import React from 'react';
-import s from './style.module.scss';
 import { SUN } from '../../consts/types.ts';
+
 import { iconSunset, iconSunrise } from '../../assets';
+import s from './style.module.scss';
 
 const DetailedSun = ({ v, time }: Props) => {
   return (
