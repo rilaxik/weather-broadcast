@@ -1,27 +1,27 @@
 $text-color: white;
 
 // section general
-$fs-city: clamp(16px, 32px, 32px);
-$fs-date: clamp(8px, 16px, 16px);
-$fs-time: clamp(32px, 64px, 64px);
+$fs-city: 2rem;
+$fs-date: 1rem;
+$fs-time: 6rem;
 
 // section detailed
-$fs-realtemp: clamp(32px, 64px, 64px);
-$fs-feels: clamp(8px, 16px, 16px);
-$fs-feelstemp: clamp(16px, 32px, 32px);
-$fs-weatherdesc: clamp(12px, 24px, 24px);
+$fs-realtemp: 4rem;
+$fs-feels: 1rem;
+$fs-feelstemp: 2rem;
+$fs-weatherdesc: 1.5rem;
 
 //detailed sun
-$fs-riseset: clamp(8px, 16px, 16px);
+$fs-riseset: 1rem;
 
 // detailed info
-$fs-info: clamp(8px, 16px, 16px);
+$fs-info: 1rem;
 
 // days forecast
-$fs-title: clamp(16px, 32px, 32px);
-$fs-daystemp: clamp(12px, 24px, 24px);
-$fs-daysdate: clamp(8px, 16px, 16px);
+$fs-title: 2rem;
+$fs-daystemp: 1.5rem;
+$fs-daysdate: 1rem;
 
 // hours forecast
-$fs-hourtime: clamp(16px, 32px, 32px);
-$fs-hourtemp: clamp(8px, 16px, 16px);
+$fs-hourtime: 2rem;
+$fs-hourtemp: 1rem;

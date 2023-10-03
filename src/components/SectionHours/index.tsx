@@ -10,7 +10,7 @@ const SectionHours = ({ weather }: Props) => {
       <div className={s.hTitle}>Hourly Forecast</div>
       <div className={s.hSWrapper}>
         {weather.hourly.time.map((item, index) => {
-          return index <= 24 && index % 3 == 0 ? (
+          return index < 24 && index % 3 == 0 ? (
             <HoursForecast
               timestamp={item}
               timezone={weather.timezone}

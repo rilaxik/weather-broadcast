@@ -7,9 +7,9 @@
   justify-content: space-between;
   align-items: center;
 
-  border-radius: 32px;
+  border-radius: 2rem;
   background-color: #444;
-  gap: 16px;
+  gap: 1rem;
 
   .dBlock {
     display: flex;
@@ -20,7 +20,7 @@
     height: 100%;
 
     &.dTemperature {
-      gap: 16px;
+      gap: 1rem;
 
       .dReal {
         display: flex;
@@ -38,7 +38,7 @@
         font-weight: 400;
         color: $text-color;
 
-        gap: 8px;
+        gap: .5rem;
 
         .dTemp {
           display: flex;
@@ -51,16 +51,16 @@
     }
 
     &.dSky {
-      gap: 16px;
+      gap: 1rem;
 
       .dIcon {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 200px;
-        height: 200px;
-        max-width: 200px;
-        max-height: 200px;
+        width: 12.5rem;
+        height: 12.5rem;
+        max-width: 12.5rem;
+        max-height: 12.5rem;
 
         img {
           width: 100%;

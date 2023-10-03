@@ -7,9 +7,9 @@
   justify-content: center;
   align-items: center;
 
-  border-radius: 32px;
+  border-radius: 2rem;
   background-color: #444;
-  gap: 24px;
+  gap: 1.5rem;
 
   .gCity {
     font-size: $fs-city;
@@ -23,7 +23,7 @@
     align-items: center;
     justify-content: center;
 
-    gap: 8px;
+    gap: .5rem;
 
     .gDate {
       display: flex;

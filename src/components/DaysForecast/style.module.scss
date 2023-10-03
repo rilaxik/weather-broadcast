@@ -10,11 +10,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 48px;
-    max-height: 48px;
+    width: 3rem;
+    height: 3rem;
+    max-width: 3rem;
+    max-height: 3rem;
 
     background-color: #333;
-    border-radius: 16px;
+    border-radius: 1rem;
 
     img {
       width: 100%;
