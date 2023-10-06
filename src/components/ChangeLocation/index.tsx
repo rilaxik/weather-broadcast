@@ -3,8 +3,10 @@ import s from './style.module.scss';
 
 const ChangeLocation = ({ callback }: Props) => {
   return (
-    <div className={s.changeWrapper} onClick={callback}>
-      <div className={s.change}>Change Location</div>
+    <div className={s.changeWrapper}>
+      <div className={s.change} onClick={callback}>
+        Change Location
+      </div>
     </div>
   );
 };

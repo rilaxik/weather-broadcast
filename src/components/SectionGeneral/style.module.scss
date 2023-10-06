@@ -11,6 +11,11 @@
   background-color: #444;
   gap: 1.5rem;
 
+  @media screen and (max-width: 1100px) {
+    align-self: stretch;
+    padding: 1rem;
+  }
+
   .gCity {
     font-size: $fs-city;
     color: $text-color;

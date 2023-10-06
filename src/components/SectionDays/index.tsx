@@ -7,7 +7,7 @@ import s from './style.module.scss';
 const SectionDays = ({ weather }: Props) => {
   return (
     <div className={s.dsWrapper}>
-      <div className={s.dsTitle}>5 Days Forecast</div>
+      <div className={s.dsTitle}>Daily Forecast</div>
       {weather.daily.time.map((item, index) => {
         return index > 0 ? (
           <DaysForecast
